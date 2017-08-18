@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Adapt Frontend Coding Challenge</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="src/css/style.css">
+    </head>
+    <body>
+        <h1 class="text-center">Contact Us!</h1>
+        <div class="box">
+            <p id="thanks"></p>
+            <a class="btn" id="another" onClick="window.location.reload()">Another one?</a>
+            <div class="inside">
+                
+            <form action="#" id="data-collect">
+                
+                    <label id="first" for="firstname">First name</label>
+                    <input type="text" id="firstname" data-validation="custom" 
+                 data-validation-regexp="[a-zA-Z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]"
+		 data-validation-error-msg="First name is required"
+                 data-validation-error-msg-container="#firstname-error-dialog"/>
+                    <div id="firstname-error-dialog" class="show-error"></div>
+                    
+                    <label id="last">Last name</label>
+                    <input type="text" id="lastname" data-validation="custom" 
+                 data-validation-regexp="[a-zA-Z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]"
+		 data-validation-error-msg="Last name is required"
+                 data-validation-error-msg-container="#lastname-error-dialog"/>  
+                    <div id="lastname-error-dialog" class="show-error"></div> 
+                    
+                    <label id="email">E-mail</label>
+                    <input type="email" id="email-input" data-validation="email" 
+                 data-validation-error-msg="Entered e-mail format is not correct" 
+		 data-validation-error-msg-container="#email-error-dialog"/>
+                    <div id="email-error-dialog" class="show-error"></div>
+              
+                    <label>Date of birth</label>
+                    <p class="info">(yyyy-mm-dd)</p>
+                    <input type="text" data-validation="date" data-validation-format="yyyy-mm-dd" 
+                 data-validation-error-msg="Entered date of birth is not correct"
+                 data-validation-error-msg-container="#date-error-dialog"/>
+                    <div id="date-error-dialog" class="show-error"></div>
+                    
+                    <label>Favourite brands</label>
+                    <p class="info">Up to 5</p>
+                    <input type="text" data-role="tagsinput"/>    
+                    
+                    <label class="category">Category</label>    
+                    <div class="category-field">
+                        <div class="row">
+                            <div class="col-sm-6">
+                    <input type="radio" id="science" name="radio-block" value="Science" checked/>
+                    <label for="science">Science</label>
+                            </div>
+                            <div class="col-sm-6">
+                    <input type="radio" id="advertisiment" name="radio-block" value="Advertisiment" />
+                    <label for="advertisiment" >Advertisement</label>
+                            </div>
+                            <div class="col-sm-6">
+                    <input type="radio" id="politics" name="radio-block" value="Politics" />
+                    <label for="politics" >Politics</label>
+                            </div>
+                            <div class="col-sm-6">
+                    <input type="radio" id="events" name="radio-block" value="Events" />
+                    <label for="events">Events</label>
+                            </div>
+                        </div>
+                  </div>
+                    
+                <div class="row margin15">
+                    <div class="col-lg-8 text-center">
+                        <input type="submit" class="btn" id="sent" value="Send"/>
+                        
+                    </div>
+                    <div class="col-lg-4 text-center">
+                        <input type="reset" class="btn" id="res" value="Reset"/>
+                </div>
+                </div>
+            </form>
+        </div>
+        </div>
+        <script src="src/js/jquery.js"></script>
+        <script src="src/js/bootstrap.js"></script>
+        <script src="src/js/bootstrap-tagsinput.js"></script>
+        <script src="src/js/velocity.min.js"></script>
+        <script src="src/js/form-validator.min.js"></script>
+        <script src="src/js/main.js"></script>
+    </body>
+</html>
